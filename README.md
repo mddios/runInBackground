@@ -10,15 +10,15 @@
 - 3. 使用全局队列实现异步执行
 - 4. 使用单利调用startRunInbackGround方法
 - 5. 开启循环
-- 6. 在Info.plist中添加UIBackgroundModes键audio （必须添加）
-
+- 6. 在Info.plist中添加UIBackgroundModes键audio（必须添加）
 - 停止时调用[[RunInBackground sharedBg] stopAudioPlay];即可
 
 
 ********************************以下为具体例子***********************************
 
 在进入后台时可以调用startRunInbackGround方法
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+
+-(void)applicationDidEnterBackground:(UIApplication *)application {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [[RunInBackground sharedBg] startRunInbackGround];
         [[NSRunLoop currentRunLoop] run];
@@ -26,7 +26,8 @@
 }
 
 前台时停止播放
-- (void)applicationDidBecomeActive:(UIApplication *)application {
+
+-(void)applicationDidBecomeActive:(UIApplication *)application {
     [[RunInBackground sharedBg] stopAudioPlay];
 }
 
