@@ -29,7 +29,6 @@
 }
 
 - (void)background {
-    
     int i = 0;
     
     // 无限循环

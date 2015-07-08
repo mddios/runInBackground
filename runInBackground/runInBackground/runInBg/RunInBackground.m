@@ -28,6 +28,7 @@
     });
     return instance;
 }
+/// 重写init方法，初始化音乐文件
 - (instancetype)init {
     if (self = [super init]) {
         [self setUpAudioSession];
