@@ -16,9 +16,10 @@
 
 ********************************以下为具体例子***********************************
 
-在进入后台时可以调用startRunInbackGround方法
+在进入后台时可以调用startRunInbackGround方法，在AppDelegate类增加isRun成员变量
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        isRun = YES;
         [[RunInBackground sharedBg] startRunInbackGround];
         [[NSRunLoop currentRunLoop] run];
     });
@@ -26,7 +27,9 @@
 
 前台时停止播放
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[RunInBackground sharedBg] stopAudioPlay];
+    if (isRun) {
+        [[RunInBackground sharedBg] stopAudioPlay];
+    }
 }
 
 

@@ -9,6 +9,11 @@
 #import "AppDelegate.h"
 #import "RunInBackground.h"
 @interface AppDelegate ()
+{
+    /// 用来标识音乐是否运行，防止stopAudioPlay在音乐没有打开时被调用
+    BOOL isRun;
+}
+
 @property (nonatomic, assign) NSThread *thread;
 @end
 
@@ -29,6 +34,7 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        isRun = YES;
         [[RunInBackground sharedBg] startRunInbackGround];
         [[NSRunLoop currentRunLoop] run];
         self.thread = [NSThread currentThread];
@@ -40,7 +46,9 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[RunInBackground sharedBg] stopAudioPlay];
+    if (isRun) {
+        [[RunInBackground sharedBg] stopAudioPlay];
+    }
     if (![self.thread isMainThread]) {
         //        [self.thread cancel];
     }

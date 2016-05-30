@@ -16,6 +16,7 @@
 		39A1EBAD1B4BA73900928B18 /* runInBackgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A1EBAC1B4BA73900928B18 /* runInBackgroundTests.m */; };
 		39A1EBB91B4BA80A00928B18 /* RunInBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A1EBB81B4BA80A00928B18 /* RunInBackground.m */; };
 		39A1EBBB1B4BAAFC00928B18 /* mysong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 39A1EBBA1B4BAAFC00928B18 /* mysong.mp3 */; };
+		6088B0A01CFBD54500BF676A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6088B09F1CFBD54500BF676A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		39A1EBB71B4BA80A00928B18 /* RunInBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunInBackground.h; sourceTree = "<group>"; };
 		39A1EBB81B4BA80A00928B18 /* RunInBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunInBackground.m; sourceTree = "<group>"; };
 		39A1EBBA1B4BAAFC00928B18 /* mysong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mysong.mp3; sourceTree = "<group>"; };
+		6088B09F1CFBD54500BF676A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		39A1EB901B4BA73900928B18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6088B09F1CFBD54500BF676A /* README.md */,
 				39A1EB911B4BA73900928B18 /* Info.plist */,
 				39A1EB921B4BA73900928B18 /* main.m */,
 			);
@@ -238,6 +241,7 @@
 			files = (
 				39A1EBB91B4BA80A00928B18 /* RunInBackground.m in Sources */,
 				39A1EB991B4BA73900928B18 /* ViewController.m in Sources */,
+				6088B0A01CFBD54500BF676A /* README.md in Sources */,
 				39A1EB961B4BA73900928B18 /* AppDelegate.m in Sources */,
 				39A1EB931B4BA73900928B18 /* main.m in Sources */,
 			);
@@ -436,6 +440,7 @@
 				39A1EBB21B4BA73900928B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39A1EBB31B4BA73900928B18 /* Build configuration list for PBXNativeTarget "runInBackgroundTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +449,7 @@
 				39A1EBB51B4BA73900928B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
